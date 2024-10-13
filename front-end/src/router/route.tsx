@@ -27,6 +27,16 @@ const Router = createBrowserRouter([
         )
         
       },
+      {
+        path: '/navbar1',
+        element: (
+          <>
+            <Navbar1 />
+            <Outlet />
+          </>
+        )
+        
+      },
 
       
 
