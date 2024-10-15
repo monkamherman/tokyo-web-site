@@ -1,4 +1,3 @@
-import { AiOutlineSearch } from "react-icons/ai";
 
 import { ModeToggle } from "./mode-toggle"
 import {
@@ -8,17 +7,17 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Bouton from "@/components/ui/utile/Button";
+import { AiOutlineSearch } from "react-icons/ai";
+
 
 
 function Navbar1() {
     return (
         <nav className="flex items-center justify-between p-4 bg-white shadow-md">
             <div className="flex items-center space-x-4">
-                <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
+                <img src="/logo.svg" alt="Logo" className="w-20 h-20" />
             </div>
             <div className="flex items-center space-x-8">
                 <NavigationMenu>
@@ -72,7 +71,8 @@ function Navbar1() {
             </div>
             <div className="flex items-center space-x-4">
                 <ModeToggle />
-                <button type="button"> <AiOutlineSearch /></button>
+            <button type="button"> <AiOutlineSearch /></button>
+
                 <Bouton label="Sign up"/>
             </div>
         </nav>

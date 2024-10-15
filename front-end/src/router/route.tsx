@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet } from "react-router-dom"
 import Navbar1 from "@/navbar/Navbar1";
 import Navbar from "@/navbar/Navbar";
 import PageError from "@/PageError";
+import Navbar2 from "@/navbar/navbar2";
 
 const Router = createBrowserRouter([
   {
@@ -11,24 +12,12 @@ const Router = createBrowserRouter([
         <Outlet />
       </>
     ),
-    // Page erreur
     errorElement: (
       <PageError />
     ),
     children: [
-      // For the 3 principales navigate links: Home, Blog, and Chat
       {
-        path: '/navbar',
-        element: (
-          <>
-            <Navbar />
-            <Outlet />
-          </>
-        )
-        
-      },
-      {
-        path: '/navbar1',
+        path: '/1',
         element: (
           <>
             <Navbar1 />
@@ -37,11 +26,16 @@ const Router = createBrowserRouter([
         )
         
       },
-
-      
-
-      
-     
+      {
+        path: '/2',
+        element: (
+          <>
+            <Navbar2 />
+            <Outlet />
+          </>
+        )
+        
+      }     
     ]
   },
 ])
