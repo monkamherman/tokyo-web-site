@@ -1,15 +1,12 @@
 
 import { ModeToggle } from "./mode-toggle"
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
 import Bouton from "@/components/ui/utile/Button";
 import { AiOutlineSearch } from "react-icons/ai";
+import Home from "./component/nav1/Home";
+import FiveColum from "./component/nav1/Fivecolum";
+import ListingPage from "./component/nav1/listing page/Listtingpage";
+import Template from "./component/nav1/Template";
+import OtherPage from "./component/nav1/OtherPage";
 
 
 
@@ -19,61 +16,17 @@ function Navbar1() {
             <div className="flex items-center space-x-4">
                 <img src="/logo.svg" alt="Logo" className="w-20 h-20" />
             </div>
-            <div className="flex items-center space-x-8">
-                <NavigationMenu>
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-                            <NavigationMenuContent >
-                                <NavigationMenuLink>online booking</NavigationMenuLink>
-                                <NavigationMenuLink>Real estate</NavigationMenuLink>
-                                <NavigationMenuLink>Home 3</NavigationMenuLink>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Life style</NavigationMenuTrigger>
-                            <NavigationMenuContent >
-                                <NavigationMenuLink>online booking</NavigationMenuLink>
-                                <NavigationMenuLink>Real estate</NavigationMenuLink>
-                                <NavigationMenuLink>Home 3</NavigationMenuLink>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Template</NavigationMenuTrigger>
-                            <NavigationMenuContent >
-                                <NavigationMenuLink>online booking</NavigationMenuLink>
-                                <NavigationMenuLink>Real estate</NavigationMenuLink>
-                                <NavigationMenuLink>Home 3</NavigationMenuLink>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Archive Page</NavigationMenuTrigger>
-                            <NavigationMenuContent >
-                                <NavigationMenuLink>online booking</NavigationMenuLink>
-                                <NavigationMenuLink>Real estate</NavigationMenuLink>
-                                <NavigationMenuLink>Home 3</NavigationMenuLink>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Other Page</NavigationMenuTrigger>
-                            <NavigationMenuContent >
-                                <NavigationMenuLink>online booking</NavigationMenuLink>
-                                <NavigationMenuLink>Real estate</NavigationMenuLink>
-                                <NavigationMenuLink>Home 3</NavigationMenuLink>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
-
-
-
-
+            <div className="flex items-center space-x-2">
+                <Home />
+                <FiveColum />
+                <ListingPage />
+                <Template />
+                <OtherPage />
             </div>
             <div className="flex items-center space-x-4">
                 <ModeToggle />
-            <button type="button"> <AiOutlineSearch /></button>
-
-                <Bouton label="Sign up"/>
+                <button type="button"> <AiOutlineSearch className="h-8 w-8" /></button>
+                <Bouton label="Sign up" />
             </div>
         </nav>
     )

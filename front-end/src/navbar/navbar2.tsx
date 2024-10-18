@@ -1,54 +1,34 @@
-import { Separator } from "@/components/ui/separator"
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
 
+import { Separator } from "@/components/ui/separator"
+import Travelers from "./component/Travelers";
+import LanguageDevice from "./component/Language-Device";
+import Template from "./component/Template";
+import Notification from "./component/Notification";
+import ListProperty from "./component/property/ListProperty";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 
 function Navbar2() {
+
     return (
         <nav className="flex items-center justify-between p-4 bg-white shadow-md">
             <div className="flex items-center space-x-4 gap-4">
                 <img src="/logo.svg" alt="Logo" />
                 <Separator orientation="vertical" className="mx-4 h-8   " />
-                <NavigationMenu>
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Travelers</NavigationMenuTrigger>
-                            <NavigationMenuContent style={{width:'15rem'}}>
-                                <NavigationMenuLink>
-                                    <div className="flex w-full gap-4 ">
-                                        <img src="/logo.svg" alt="" />
-                                        <div className="flex flex-col ">
-                                            <p className="fontsemi">
-                                                stays
-                                            </p>
-                                            <p>stays rental description</p>
-                                        </div>
-
-                                    </div>
-                                </NavigationMenuLink>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                    </NavigationMenuList>
-                </NavigationMenu>
-
-            </div>
-            <div className="flex items-center space-x-8">
-
-
+               <Travelers/>
             </div>
             <div className="flex items-center space-x-4">
+                <Template />
+                <LanguageDevice />
+                <ListProperty/>
+                <Notification />
+                <Avatar>
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
 
-            </div>
-        </nav>
+            </div >
+        </nav >
     )
 }
 
