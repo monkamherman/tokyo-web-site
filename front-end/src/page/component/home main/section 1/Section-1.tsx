@@ -1,36 +1,51 @@
+import { BiChevronLeftCircle } from "react-icons/bi"; 
+import { BiChevronRightCircle } from "react-icons/bi"; 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import { mock1 } from '@/page/component/home main/section 1/Mock-section1';
 
-function Section_1() {
+const Section_1: React.FC = () => {
   return (
-    <div className="mt-[6rem] ml-[3rem] ">
-      <h1 className="text-[2rem] font-bold">Suggestions for discovery</h1>
-      <p className="text-[1.2rem] text-gray-500 ">popular places to recommends for you</p>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={5}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        <SwiperSlide>
-          <div className='h-[4rem]'>
-            <div className='bg-gray-500 h-[4rem]'>
-              <img src="/logo.svg" className='h-[3rem] w-2 rounded-lg' alt="" />
+    <section className="container mx-auto px-4 py-8 mt-8 p-8">
+    <h2 className="text-2xl font-semibold mb-2">Suggestions for discovery</h2>
+    <p className="text-gray-600 text-[1rem] mb-6">Popular places to recommends for you</p>
+    
+    <Swiper
+      modules={[Navigation]}
+      spaceBetween={10}
+      slidesPerView={5}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }}
+      loop
+      className="pb-4"
+    >
+      {mock1.slice(0, 6).map((item) => (
+        <SwiperSlide key={item.id}>
+          <div className="rounded-lg overflow-hidden shadow-md">
+            <img 
+              src={item.image} 
+              alt={item.ville} 
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="font-semibold text-lg">{item.ville}</h3>
+              <p className="text-sm text-gray-600">{item.property}</p>
             </div>
-            <h1>Londre</h1>
-            <p>288,888</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide><div>kk</div></SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        ...
-      </Swiper>
-
-    </div>
-  )
+      ))}
+      <div className="swiper-button-prev">
+        <BiChevronLeftCircle className="w-8 h-8 text-gray-700" />
+      </div>
+      <div className="swiper-button-next">
+        <BiChevronRightCircle className="w-8 h-8 text-gray-700"  />
+      </div>
+    </Swiper>
+  </section>  )
 }
 
 export default Section_1
