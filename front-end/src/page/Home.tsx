@@ -1,5 +1,7 @@
+import CustomizePanel from "./component/Button_setting"
 import HomeMain from "./component/home main/HomeMain"
-import Navbar1 from "../navbar/Navbar1"
+import Footer from "./Flooter"
+import Navbar1 from "./navbar/Navbar1"
 
 function Home() {
     return (
@@ -7,8 +9,9 @@ function Home() {
             <header>
                 <Navbar1 />
             </header>
-
+                <CustomizePanel/>
             <HomeMain />
+            <Footer/>
         </div>
     )
 }

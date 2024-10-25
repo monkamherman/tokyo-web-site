@@ -1,6 +1,6 @@
 import { createBrowserRouter, Outlet } from "react-router-dom"
 import PageError from "@/PageError";
-import Navbar2 from "@/navbar/navbar2";
+import Navbar2 from "@/page/navbar/navbar2";
 import Home from "@/page/Home";
 
 const Router = createBrowserRouter([

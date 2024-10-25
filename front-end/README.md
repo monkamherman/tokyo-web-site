@@ -128,5 +128,10 @@ Créé par : [DimitriTedom alias SnowDev](https://github.com/DimitriTedom)
 
 Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
+### lien pour lapplication:
+[https://chisfis-nextjs.vercel.app/]
+### lien pour le design:
+[https://www.figma.com/design/06ezNdu7lXVpeAsTmkozxh/Chisfis---Online-booking-website-design-(Community)?node-id=384-6671&t=8DhlYsDS8ywiiBgG-1]
+
 ---
 

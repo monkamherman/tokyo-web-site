@@ -2,6 +2,9 @@ import Stays from "./component/Stays"
 import Bouton from "@/components/ui/utile/Button"
 import { SetStateAction, useState } from "react";
 import Section_1 from "./section 1/Section-1";
+import Section_2 from "./Section_2";
+import Section_3 from "./section 3/Section_3";
+import Section_4 from "./Section_4";
 
 
 const Experiences = () => <div>Contenu pour Experiences</div>;
@@ -67,6 +70,9 @@ function HomeMain() {
 
             </div>
             <Section_1/>
+            <Section_2/>
+            <Section_3/>
+            <Section_4/>
         </>
     )
 }
