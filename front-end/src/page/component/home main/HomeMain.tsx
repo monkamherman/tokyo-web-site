@@ -69,10 +69,10 @@ function HomeMain() {
                 </div>
 
             </div>
-            <Section_1/>
-            <Section_2/>
-            <Section_3/>
-            <Section_4/>
+            <Section_1 />
+            <Section_2 />
+            <Section_3 />
+            <Section_4 />
         </>
     )
 }

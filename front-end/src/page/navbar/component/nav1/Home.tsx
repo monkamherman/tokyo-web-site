@@ -15,7 +15,7 @@ function Home() {
     const handleMouseLeave = () => {
         const timeout = setTimeout(() => {
             setIsOpen(false);
-        }, 500); // 1 seconde avant de masquer la div
+        }, 100); // 1 seconde avant de masquer la div
         setHoverTimeout(timeout);
     };
 
@@ -26,7 +26,7 @@ function Home() {
             <p>Home</p>
             {isOpen ? <BiChevronUp /> : <BiChevronDown />}
             {isOpen && (
-                <div className="absolute  p-4 top-14 -left-[2rem]  shadow-md ">
+                <div className="absolute  p-4 top-14 -left-[2rem] bg-white  shadow-md ">
                     <div className="flex flex-col w-full gap-4 px-2 ">
                         <a href="" className="text-[.8rem] hover:bg-gray-100 rounded-lg">Online booking</a>
                         <a href="" className="flex items-center gap-2">

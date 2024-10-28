@@ -15,7 +15,7 @@ function FiveColum() {
     const handleMouseLeave = () => {
         const timeout = setTimeout(() => {
             setIsOpen(false);
-        }, 500); // 1 seconde avant de masquer la div
+        }, 100); // 1 seconde avant de masquer la div
         setHoverTimeout(timeout);
     };
 
@@ -26,7 +26,7 @@ function FiveColum() {
             <p>Five columns</p>
             {isOpen ? <BiChevronUp /> : <BiChevronDown />}
             {isOpen && (
-                <div className="absolute  p-4 top-20 -left-[18rem] w-[80rem] shadow-md ">
+                <div className="absolute  p-4 top-20 -left-[18rem] bg-white w-[80rem] shadow-md ">
                     <div className="grid grid-cols-5 gap-4">
                         <div className='flex flex-col'>
                             <img src="/logo.svg"  alt="Tropical beach with palm trees" className=" rounded-lg w-38 h-24 object-cover" />

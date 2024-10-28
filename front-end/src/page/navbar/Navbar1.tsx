@@ -12,7 +12,7 @@ import OtherPage from "./component/nav1/OtherPage";
 
 function Navbar1() {
     return (
-        <nav className="flex items-center justify-between p-4 bg-white shadow-md">
+        <nav className="flex items-center justify-between px-12 bg-blur fixed w-screen z-50 shadow-md">
             <div className="flex items-center space-x-4">
                 <img src="/logo.svg" alt="Logo" className="w-20 h-20" />
             </div>

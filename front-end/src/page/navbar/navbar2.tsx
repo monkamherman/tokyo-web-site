@@ -11,7 +11,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 function Navbar2() {
 
     return (
-        <nav className="flex items-center justify-between p-4 bg-white shadow-md">
+        <nav className="flex items-center justify-between p-4 bg-white bg-blur fixed w-screen z-50 shadow-md">
             <div className="flex items-center space-x-4 gap-4">
                 <img src="/logo.svg" alt="Logo" />
                 <Separator orientation="vertical" className="mx-4 h-8   " />

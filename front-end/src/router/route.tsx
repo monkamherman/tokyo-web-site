@@ -1,7 +1,8 @@
 import { createBrowserRouter, Outlet } from "react-router-dom"
 import PageError from "@/PageError";
-import Navbar2 from "@/page/navbar/navbar2";
 import Home from "@/page/Home";
+import HomeMain from "@/page/component/home main/HomeMain";
+import Home_2 from "@/page/component/real estate/Home_2";
 
 const Router = createBrowserRouter([
   {
@@ -9,6 +10,7 @@ const Router = createBrowserRouter([
     element: (
       <>
         <Outlet />
+        <Home/>
       </>
     ),
     errorElement: (
@@ -16,20 +18,20 @@ const Router = createBrowserRouter([
     ),
     children: [
       {
-        path: '/home',
+        path: '/home main',
         element: (
           <>
-            <Home />
+            <HomeMain />
             <Outlet />
           </>
         )
         
       },
       {
-        path: '/2',
+        path: '/home 2',
         element: (
           <>
-            <Navbar2 />
+            <Home_2 />
             <Outlet />
           </>
         )
