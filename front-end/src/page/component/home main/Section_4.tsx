@@ -23,20 +23,21 @@ const Section_4: React.FC = () => {
       </div>
       <div className="flex justify-around">
         <Step
-          imageSrc="/images/backpack-drinks.png"
+          imageSrc="/4.png"
           title="Book & relax"
           description="Let each trip be an inspirational journey, each room a peaceful space"
         />
         <Step
-          imageSrc="/images/beach-items.png"
+          imageSrc="/5.png"
           title="Smart checklist"
           description="Let each trip be an inspirational journey, each room a peaceful space"
         />
         <Step
-          imageSrc="/images/coconut-drink.png"
+          imageSrc="/6.png"
           title="Save more"
           description="Let each trip be an inspirational journey, each room a peaceful space"
         />
+        <img className='absolute' src="/Vector.svg" alt="" />
       </div>
     </section>
   );

@@ -58,13 +58,13 @@ function HomeMain() {
                 </div>
                 <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-4   ">
                     <div className="bg-slate-400">
-                        <img src="/logo.svg" alt="" />
+                        <img src="/1.svg" alt="" />
                     </div>
                     <div className="row-span-2 bg-slate-600 mt-12">
-                        <img src="/logo.svg" alt="" />
+                        <img src="/3.png" alt="" />
                     </div>
                     <div className="bg-slate-500 ">
-                        <img src="/logo.svg" alt="" />
+                        <img src="/2.png" alt="" />
                     </div>
                 </div>
 

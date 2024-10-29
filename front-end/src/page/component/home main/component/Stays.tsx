@@ -3,7 +3,7 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import React, { useState } from "react";
 import Calendar from "./Calandar";
-
+import GuestSelector from "./Guest";
 function Stays() {
   const [dateRange, setDateRange] = useState("Oct 01 - Oct 18");
   const [showCalendar, setShowCalendar] = useState(false);
@@ -15,6 +15,11 @@ function Stays() {
 
   const toggleCalendar = () => {
     setShowCalendar(!showCalendar);
+  };
+  const [showGuestSelector, setShowGuestSelector] = useState(false);
+
+  const toggleGuestSelector = () => {
+    setShowGuestSelector((prev) => !prev);
   };
 
   return (
@@ -37,19 +42,24 @@ function Stays() {
             <span className="text-[1rem] text-gray-500">Check in - Check out</span>
           </div>
         </div>
-        <div className="flex gap-4 items-center border-l-gray-500 ml-4">
+        <div onClick={toggleGuestSelector} className="flex gap-4 items-center border-l-gray-500 ml-4">
           <AiOutlineCalendar className="h-8 w-8" />
           <div className="flex flex-col">
             <p className="text-[1.3rem] font-semibold">4 Guests</p>
             <span className="text-[1rem] text-gray-500">Guests</span>
           </div>
+          {showGuestSelector && (
+            <div className="absolute top-full z-50">
+              <GuestSelector />
+            </div>
+          )}
         </div>
         <div className="p-8 bg-blue-600 rounded-[50%] hover:bg-blue-500">
           <AiOutlineSearch className="h-6 w-6" />
         </div>
       </div>
       {showCalendar && (
-        <div className="absolute top-full mt-2 left-0 z-10">
+        <div className="absolute top-full mt-2 right-36 z-10">
           <Calendar onDateChange={handleDateChange} />
         </div>)}
     </div>
